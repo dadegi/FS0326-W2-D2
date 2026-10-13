@@ -11,6 +11,16 @@ console.log(persona);
 const myPerson = document.getElementById('myPerson');
 myPerson.innerText = `${persona.nome} ${persona.cognome} di anni ${persona.eta}`;
 
+persona.nome = 'Maria';
+console.log(persona);
+document.getElementById('myPerson2').innerText =
+	`${persona.nome} ${persona.cognome} di anni ${persona.eta}`;
+
+persona.eta = 38;
+console.log(persona);
+document.getElementById('myPerson3').innerText =
+	`${persona.nome} ${persona.cognome} di anni ${persona.eta}`;
+
 console.log(persona.nome, persona.cognome);
 
 persona.eta = 32;
@@ -175,6 +185,7 @@ console.log(names);
 console.log('------------------------------');
 
 let voto = 20;
+let iscritto = false;
 
 if (voto >= 26) {
 	console.log('Ottimo');
@@ -190,3 +201,25 @@ const myState =
 		? `Hai ${myAge} anni, sei maggiorenne`
 		: `Hai ${myAge} anni, sei minorenne`;
 console.log(myState);
+
+if (iscritto) {
+	if (voto >= 26) {
+		console.log('Ottimo');
+	} else if (voto > 20) {
+		console.log('Buono');
+	} else {
+		console.log('Sufficiente');
+	}
+} else {
+	console.log("Non può sostenere l'esame");
+}
+
+let num1 = 12;
+let num2 = 28;
+
+if ((num1 = num2)) {
+	// ERRORE! = è un operatore di assegnazione, per cui con questa riga num2 diventa UGUALE a num1. Sintassi corretta: if (num1 === num2)
+	console.log('num1 e num2 sono uguali');
+} else {
+	console.log('num1 e num2 sono diversi');
+}
