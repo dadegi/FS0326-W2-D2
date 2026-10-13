@@ -171,3 +171,22 @@ console.log(names);
 
 names.reverse();
 console.log(names);
+
+console.log('------------------------------');
+
+let voto = 20;
+
+if (voto >= 26) {
+	console.log('Ottimo');
+} else if (voto > 20) {
+	console.log('Buono');
+} else {
+	console.log('Sufficiente');
+}
+
+let myAge = 17;
+const myState =
+	myAge >= 18
+		? `Hai ${myAge} anni, sei maggiorenne`
+		: `Hai ${myAge} anni, sei minorenne`;
+console.log(myState);
