@@ -1,0 +1,173 @@
+const persona = {
+	nome: 'Mario',
+	cognome: 'Rossi',
+	eta: 25,
+	attivo: true,
+	'corso scelto': 'FS0326',
+};
+
+console.log(persona);
+
+const myPerson = document.getElementById('myPerson');
+myPerson.innerText = `${persona.nome} ${persona.cognome} di anni ${persona.eta}`;
+
+console.log(persona.nome, persona.cognome);
+
+persona.eta = 32;
+console.log(persona);
+
+persona.citta = 'Roma';
+console.log(persona);
+
+delete persona.attivo;
+
+console.log(persona);
+
+let nome = 'Pippo';
+console.log(nome);
+
+console.log(persona['corso scelto']);
+
+delete persona.citta;
+
+persona.indirizzo = {
+	via: 'Roma',
+	civico: 20,
+	citta: 'Napoli',
+};
+
+console.log(persona);
+
+const disco = {
+	titolo: 'The dark side of the moon',
+	autore: 'Pink Floyd',
+	anno: 1973,
+	caseDisc: {
+		europa: 'RCA',
+		USA: 'Columbia',
+		sudamerica: 'CBS',
+	},
+	genere: 'Progressive',
+};
+
+console.log(disco);
+
+console.log(disco.caseDisc.USA);
+
+console.log(Object.hasOwn(persona, 'scuola'));
+console.log(Object.hasOwn(persona, 'nome'));
+
+delete persona.eta;
+
+persona.anno = 1980;
+let annoCorrente = 2026;
+
+persona.eta = annoCorrente - persona.anno;
+console.log(persona);
+
+console.log('--------------------------');
+
+const mesi = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile'];
+console.log(mesi);
+
+const myArray = document.getElementById('myArray');
+
+const numbers = [10, 2, 43, 24, 51, 76];
+
+const student = ['Aldo', 'Bianchi', 30, true];
+
+console.table(persona);
+console.table(mesi);
+
+console.log(mesi[0]);
+console.log(mesi.length);
+console.log(mesi[mesi.length - 1]);
+console.log(mesi.at(-1));
+
+student[1] = 'Verdi';
+console.log(student);
+
+console.log(numbers.at(4));
+
+numbers[numbers.length] = 18;
+console.log(numbers);
+
+numbers[numbers.length] = [3, 67, 21];
+console.log(numbers);
+
+const newStudent = student.with(0, 'Giovanna');
+console.log(student, newStudent);
+
+mesi.push('Maggio');
+console.log(mesi);
+
+let rimosso = mesi.pop();
+console.log(mesi, `Mese rimosso: ${rimosso}`);
+
+mesi.unshift('Dicembre');
+console.log(mesi);
+
+let rimosso2 = mesi.shift();
+console.log(mesi, `Mese rimosso: ${rimosso2}`);
+
+const names = ['Alessandro', 'Federico', 'Francesca', 'Miriam', 'Giuseppe'];
+console.log(names);
+
+names.splice(1, 2);
+console.log(names);
+
+names.splice(0, 0, 'Fabio', 'Lisa');
+console.log(names);
+
+names.splice(1, 1, 'Gabriele', 'Laura', 'Mattia');
+console.log(names);
+
+const newNames = names.toSpliced(0, names.length / 2);
+console.log(newNames);
+
+const students = [
+	{
+		nome: 'Mario',
+		cognome: 'Rossi',
+	},
+	{
+		nome: 'Aldo',
+		cognome: 'Bianchi',
+	},
+	{
+		nome: 'Giovanna',
+		cognome: 'Neri',
+	},
+];
+
+console.log(students);
+console.log(students[1].cognome); // Prendi il valore della proprietà 'cognome' dell'oggetto in posizione 1 nell'array students
+
+const prodotti = [
+	{
+		nome: 'Penna',
+		prezzo: 1.5,
+		disponibile: true,
+	},
+	{
+		nome: 'Quaderno',
+		prezzo: 4.0,
+		disponibile: false,
+	},
+];
+
+console.log(`Abbiamo ${prodotti.length} prodotti`);
+
+prodotti.push({
+	nome: 'Astuccio',
+	prezzo: 12.0,
+	disponibile: true,
+});
+
+console.log(`Abbiamo ${prodotti.length} prodotti`);
+
+names.sort();
+console.log(names);
+
+names.reverse();
+console.log(names);
